@@ -1,8 +1,8 @@
 # visx works
 
 ## bar-chart
-<a href="https://akihiro-tj.github.io/visx-works/bar-chart/" target="_blank">
-  <img src="img/bar-chart.png" width="600px">
+<a href="https://akihiro-tj.github.io/visx-works/bar-chart/">
+  <img src="img/bar-chart.png" width="500px">
 </a>
 
 - [Demo](https://akihiro-tj.github.io/visx-works/bar-chart/)
