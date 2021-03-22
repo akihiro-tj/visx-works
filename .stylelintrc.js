@@ -29,5 +29,11 @@ module.exports = {
     ],
     'no-empty-source': null,
     'block-no-empty': null,
+    'selector-pseudo-class-no-unknown': [
+      true,
+      {
+        ignorePseudoClasses: ['global'],
+      },
+    ],
   },
 };
