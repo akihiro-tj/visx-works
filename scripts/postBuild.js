@@ -1,7 +1,11 @@
 const fs = require('fs-extra');
-const path = require('path');
 
 const dir = process.argv[2];
-const src = path.resolve('docs', dir, dir, 'static');
-const dest = path.resolve('docs', dir, 'static');
-fs.moveSync(src, dest);
+const repoName = 'visx-works';
+const htmlPath = `docs/${dir}/index.html`;
+
+const src = fs.readFileSync(htmlPath).toString();
+const dest = src.replace(/\/static/g, `/${repoName}/${dir}/static`);
+fs.writeFile(htmlPath, dest, (err) => {
+  if (err) console.log(err);
+});
