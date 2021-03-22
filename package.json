@@ -1,9 +1,9 @@
 {
-  "name": "react-ts-app",
+  "name": "visx-works",
   "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/akhrtj/react-ts-app.git"
+    "url": "git+https://github.com/akihiro-tj/visx-works.git"
   },
   "private": true,
   "scripts": {
@@ -20,6 +20,10 @@
     "upgrade:latest": "yarn upgrade-interactive --latest"
   },
   "dependencies": {
+    "@visx/group": "^1.7.0",
+    "@visx/mock-data": "^1.7.0",
+    "@visx/scale": "^1.7.0",
+    "@visx/shape": "^1.7.0",
     "classnames": "^2.2.6",
     "react": "^17.0.1",
     "react-app-polyfill": "^2.0.0",
