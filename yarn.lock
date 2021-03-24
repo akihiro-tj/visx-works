@@ -2204,6 +2204,17 @@
     "@types/d3-random" "^2.2.0"
     d3-random "^2.2.2"
 
+"@visx/network@^1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@visx/network/-/network-1.7.0.tgz#90048b8a084c44baaefd690c09e7446fa4659a66"
+  integrity sha512-9m9OzVUte4rHj1ICii01v2aavRkFcF7K1ckTnchE1xOqEUJPRxxPuFz+zEyFTah1tYl8AmTEtbnIEQJOPFVMSQ==
+  dependencies:
+    "@types/classnames" "^2.2.9"
+    "@types/react" "*"
+    "@visx/group" "1.7.0"
+    classnames "^2.2.5"
+    prop-types "^15.6.2"
+
 "@visx/point@1.7.0":
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/@visx/point/-/point-1.7.0.tgz#1df3c3425eae464f498473bcdda2fcae05c8ecbe"
