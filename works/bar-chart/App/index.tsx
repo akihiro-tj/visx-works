@@ -9,9 +9,9 @@ export const App: React.FC = () => {
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles['chart-wrapper']}>
-        <div className={styles['chart-inner']}>
-          <ParentSize className={styles['chart-item']}>
+      <div className={styles['chart-root']}>
+        <div className={styles['chart-wrapper']}>
+          <ParentSize className={styles['chart-inner']}>
             {(parent) =>
               parent.width &&
               parent.height && (

@@ -4,7 +4,7 @@
   width: 100%;
 }
 
-.chart-wrapper {
+.chart-root {
   position: relative;
   width: calc(100% - 2rem);
   max-width: 420px;
@@ -12,12 +12,12 @@
   background-color: #fff;
 }
 
-.chart-inner {
+.chart-wrapper {
   width: 100%;
   padding-top: 100%;
 }
 
-.chart-item {
+.chart-inner {
   position: absolute;
   top: 0;
   left: 0;
@@ -26,12 +26,12 @@
 }
 
 @include mq-tab {
-  .chart-wrapper {
+  .chart-root {
     width: 600px;
     max-width: none;
   }
 
-  .chart-inner {
+  .chart-wrapper {
     padding-top: 450px;
   }
 }
