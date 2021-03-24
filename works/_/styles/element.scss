@@ -1,5 +1,6 @@
 html,
-body {
+body,
+#root {
   height: 100%;
 }
 
@@ -8,34 +9,18 @@ html {
 }
 
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-family: $font-family;
 }
 
 #root {
-  &::before {
-    content: 'visible: <= 768px';
-  }
-
-  svg {
-    display: none;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eee;
 }
 
 @include mq-tab {
   html {
     font-size: 18px;
-  }
-
-  #root {
-    &::before {
-      display: none;
-    }
-
-    svg {
-      display: block;
-    }
   }
 }
