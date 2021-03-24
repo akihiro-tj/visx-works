@@ -7,7 +7,6 @@ import { AxisLeft, AxisBottom } from '@visx/axis';
 import { Text } from '@visx/text';
 import { GridRows } from '@visx/grid';
 import { format } from 'd3-format';
-import styles from './barChart.module.scss';
 
 type Props = {
   data: Datum[];
@@ -41,14 +40,14 @@ export const BarChart: React.FC<Props> = ({
 
   return (
     <ScaleSVG width={width} height={height}>
-      <Group className={styles['grid-layer']}>
+      <Group>
         <GridRows
           scale={yScale}
           width={width - margin.left - margin.right}
           left={margin.left}
         />
       </Group>
-      <Group className={styles['axis-layer']}>
+      <Group>
         <AxisLeft
           scale={yScale}
           left={margin.left}
@@ -57,10 +56,11 @@ export const BarChart: React.FC<Props> = ({
           tickFormat={(d) => format('.0f')(d.valueOf() * 100)}
         />
         <Text
-          className={styles['tick-label']}
           x={margin.left}
           y={margin.top}
           dx="-1em"
+          fontSize={10}
+          fill="#333"
         >
           %
         </Text>
@@ -71,15 +71,15 @@ export const BarChart: React.FC<Props> = ({
           hideTicks
         />
       </Group>
-      <Group className={styles['plot-layer']}>
+      <Group>
         {data.map((d, i) => (
           <Bar
             key={'bar-' + i}
-            className={styles.bar}
             x={xScale(d.x)}
             y={yScale(d.y)}
             width={xScale.bandwidth() - 1}
             height={height - margin.bottom - yScale(d.y)}
+            fill="steelblue"
           />
         ))}
       </Group>
