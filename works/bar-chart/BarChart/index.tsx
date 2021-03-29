@@ -4,7 +4,6 @@ import { Group } from '@visx/group';
 import { Bar } from '@visx/shape';
 import { scaleLinear, scaleBand } from '@visx/scale';
 import { AxisLeft, AxisBottom } from '@visx/axis';
-import { Text } from '@visx/text';
 import { GridRows } from '@visx/grid';
 import { format } from 'd3-format';
 
@@ -55,15 +54,16 @@ export const BarChart: React.FC<Props> = ({
           hideTicks
           tickFormat={(d) => format('.0f')(d.valueOf() * 100)}
         />
-        <Text
+        <text
           x={margin.left}
           y={margin.top}
           dx="-1em"
+          textAnchor="end"
           fontSize={10}
           fill="#333"
         >
           %
-        </Text>
+        </text>
         <AxisBottom
           scale={xScale}
           top={height - margin.bottom}
